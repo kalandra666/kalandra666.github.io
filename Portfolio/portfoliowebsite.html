@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HanzStudio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #222;
+      background: linear-gradient(180deg, #f9f9ff, #ffffff);
+      line-height: 1.7;
+    }
+
+    /* HERO */
+    header {
+      min-height: 100vh;
+      background: url("image/img1.jpg") center / cover no-repeat;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 2rem;
+    }
+    header h1 { font-size: 4.5rem; font-weight: 700; }
+    header p { max-width: 600px; margin: 1rem 0 2rem; color: #ccc; }
+    nav a {
+      margin-right: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: #f70000;
+      left: 0;
+      bottom: -5px;
+      transition: 0.3s;
+    }
+    nav a:hover::after { width: 100%; }
+
+    section { padding: 5rem 2rem; max-width: 1200px; margin: auto; }
+    h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .about img {
+      width: 100%;
+      height: 450px;
+      background: linear-gradient(135deg, #ddd, #bbb);
+      border-radius: 20px;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .service-card:hover { transform: translateY(-8px); }
+
+    /* PORTFOLIO */
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .portfolio-item {
+      border-radius: 20px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+      transition: transform 0.3s;
+    }
+    .portfolio-item:hover { transform: scale(1.03); }
+    .portfolio-item img {
+      width: 100%;
+      height: 240px;
+      background: linear-gradient(135deg, #e0e0e0, #cfcfcf);
+    }
+    .portfolio-item div { padding: 1.2rem; }
+
+    /* CONTACT */
+    .contact {
+      background: linear-gradient(135deg, #111, #000);
+      color: #fff;
+      border-radius: 30px;
+      padding: 4rem 3rem;
+    }
+    .contact p { margin: 0.6rem 0; }
+    .contact a { color: #fff; text-decoration: none; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.5rem; }
+      .about { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+ <link rel="icon" type="image/png" href="image/logo.png">
+<body>
+
+<header>
+ 
+  <h1>Hanz Studio</h1>
+  <p>Freelance Graphic Designer crafting bold, modern visuals for brands and digital products.</p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    <div>
+      <p>
+        Welcome! I'm a Graphic Designer with 5 years of professional experience specializing in creating strategic, 
+        visually compelling brands and user experiences. My foundation is strengthened by a Computer Science degree, 
+        which allows me to approach design challenges with a unique blend of creative flair and technical problem-solving. 
+        I don't just make things look good, I design systems that work efficiently and effectively. 
+        Explore my portfolio to see how I bring this dual perspective to life.
+      </p>
+      
+    </div>
+    <img src="image/img2.png" alt="Your photo">
+  </div>
+</section>
+
+<section id="services">
+  <h2>Services</h2>
+  <div class="services-grid">
+    <div class="service-card">Brand Identity & Logo Design</div>
+    <div class="service-card">UI/UX & Web Design</div>
+    <div class="service-card">Social Media & Content Design</div>
+    <div class="service-card">Print & Marketing Materials</div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2>Previous Works</h2>
+  <div class="portfolio">
+
+    
+    <div class="portfolio-item">
+      <img src="image/work1.jpg" alt="Project">
+      <div>
+        <h3>Restaurant Logo</h3>
+        <p>Modern and minimalistic logo design for a restaurant.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="image/work2.png" alt="Project">
+      <div>
+        <h3>Menu Design</h3>
+        <p>Eyes catching menu for a restaurant.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="image/work3.png" alt="Project">
+      <div>
+        <h3>Prduct 3D Render</h3>
+        <p>Realistic render of a product.</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="image/work4.png" alt="Project">
+      <div>
+        <h3>Banner</h3>
+        <p>Informative banner with pleasing visuals.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="image/work5.jpg" alt="Project">
+      <div>
+        <h3>Product Image Editing</h3>
+        <p>Creative image to attract more customers.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="image/work6.png" alt="Project">
+      <div>
+        <h3>Restaurant Website</h3>
+        <p>A full working website for a restaurant.</p>
+      </div>
+    </div>
+
+    <div class="portfolio-item">
+      <img src="image/work7.png" alt="Project">
+      <div>
+        <h3>E-commerce Website</h3>
+        <p>A website where cutomers can make a laptop purchase online.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="image/work8.jpg" alt="Project">
+      <div>
+        <h3>Product Image Editing</h3>
+        <p>Seamless editing of a product in a creative way.</p>
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <img src="image/work9.jpg" alt="Project">
+      <div>
+        <h3>Menu Bunting</h3>
+        <p>An eye catching bunting of a menu with comple information.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2>Let’s Work Together</h2>
+    <p>Email: hanzstudio@gmail.com</p>
+    <p>Phone: 01119390396</p>
+    <p>Instagram | Behance | Dribbble | LinkedIn</p>
+  </div>
+</section>
+
+<footer>
+  © 2025 Hanz Studio. All rights reserved.
+</footer>
+
+</body>
+</html>
